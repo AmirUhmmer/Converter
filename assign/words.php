@@ -27,11 +27,11 @@ function word_checker($pending_word)
     //loop in every word
     foreach($split_words as $word){
         //ZERO
-        if(array_search($word, $ones_word_arr) == 0){
+        if($word == 'zero'){
           $final_output = '0';
         }
         //if the word is in array 
-        elseif(array_search($word, $ones_word_arr) && $word!="zero"){
+        elseif(array_search($word, $ones_word_arr) && $word != "zero"){
           $SINGLE += (int)array_search($word, $ones_word_arr);
         
         }
